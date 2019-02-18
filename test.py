@@ -33,3 +33,33 @@ def isPalindrome(number):
 			return False
 result = isPalindrome(int(input('请输入一个数字：'))) 
 print(result)
+
+
+#Roman To Integer
+#
+def romanToInt(s):
+	a = {'I':1,
+             'V':5,
+             'X':10,
+             'L':50,
+             'C':100,
+             'D':500,
+             'M':1000}
+ans = 0
+for i in range(len(s)):
+	if i ==0 or a[s[i]]<=a[s[i-1]]:
+		ans+=a[s[i]]
+	else:
+		ans+=a[s[i]]-2*a[s[i-1]]
+	return ans
+result = romanToInt(input('请输入罗马字符:'))
+print(result)
+
+
+	
+
+
+
+
+
+
