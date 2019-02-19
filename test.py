@@ -56,6 +56,18 @@ result = romanToInt(input('请输入罗马字符:'))
 print(result)
 
 
+#Two Sum
+
+def twoSum(nums,target):
+	for i in range(len(nums)):
+		x = target - nums[i]
+		if i in nums and nums.index(x) != i:
+			return [i,nums.index(x)]
+
+
+
+	
+
 	
 
 
